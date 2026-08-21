@@ -60,4 +60,4 @@ my:
  variable: "variable-in-default"
 
 features:
- user-tracking-enabled: true
+ user-tracking-enabled: false
