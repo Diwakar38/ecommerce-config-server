@@ -58,3 +58,6 @@ resilience4j:
 
 my:
  variable: "variable-in-default"
+
+features:
+ user-tracking-enabled: true
