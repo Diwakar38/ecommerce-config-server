@@ -3,6 +3,8 @@ management:
     web:
       exposure:
         include: "*"
+    env:
+     show-values: always
   tracing:
     sampling:
       probability: 1.0
