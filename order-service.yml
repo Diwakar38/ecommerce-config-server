@@ -55,3 +55,6 @@ resilience4j:
         waitDurationInOpenState: 20s
         permittedNumberOfCallsInHalfOpenState: 3
         eventConsumerBufferSize: 10
+
+my:
+ variable: "variable-in-default"
