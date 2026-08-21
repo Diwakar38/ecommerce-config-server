@@ -1,17 +1,17 @@
 management:
+  endpoint:
+    env:
+      show-values: always
   endpoints:
     web:
       exposure:
         include: "*"
-    env:
-     show-values: always
   tracing:
     sampling:
       probability: 1.0
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
-
 eureka:
   instance:
     instance-id: ${spring.application.name}:${server.port}
