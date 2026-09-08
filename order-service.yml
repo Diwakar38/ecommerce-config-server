@@ -8,17 +8,16 @@ spring:
     password: ${DB_PASSWORD:diwakar}
 
   jpa:
-  #   hibernate:
-  #     ddl-auto: create-drop
+    # hibernate:
+    #   ddl-auto: create-drop
     show-sql: true
     properties.hibernate.format_sql: true
-#    defer-datasource-initialization: true
+    # defer-datasource-initialization: true
 
-#  sql:
-#    init:
-#      mode: always
-#      data-locations: classpath:data.sql
-
+# sql:
+#   init:
+#     mode: always
+#     data-locations: classpath:data.sql
 
 server:
   port: 9020
@@ -30,12 +29,14 @@ resilience4j:
       inventoryRetry:
         maxRetryAttempts: 3
         waitDuration: 5s
+
   ratelimiter:
     instances:
       inventoryRateLimiter:
         limitRefreshPeriod: 5s
         limitForPeriod: 1
         timeoutDuration: 1s
+
   circuitbreaker:
     instances:
       inventoryCircuitBreaker:
@@ -49,7 +50,7 @@ resilience4j:
         eventConsumerBufferSize: 10
 
 my:
- variable: "variable-in-default"
+  variable: "variable-in-default"
 
 features:
- user-tracking-enabled: false
+  user-tracking-enabled: false
