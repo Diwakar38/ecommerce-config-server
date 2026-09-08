@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_SERVICE}:5432/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+eureka:
+  instance:
+    hostname: order-service
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
